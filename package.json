@@ -10,10 +10,13 @@
     "start": "probot run ./index.js",
     "lint": "standard --fix",
     "test": "jest && standard",
-    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "probot": "^6.0.0"
+    "probot": "^6.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "jest": "^22.4.3",
@@ -28,5 +31,6 @@
     "env": [
       "jest"
     ]
-  }
+  },
+  "snyk": true
 }
